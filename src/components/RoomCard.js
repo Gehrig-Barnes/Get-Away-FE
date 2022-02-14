@@ -1,9 +1,8 @@
 import React from "react"
-
-function RoomCard (){
+function RoomCard(){
     return (
         <div>
-            <h2>hello</h2>
+            <h3>hello</h3>
         </div>
     )
 }

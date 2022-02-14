@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react"
-import RoomCard from "./RoomCard"
+import RoomList from "./RoomList"
 import {Route, Routes} from "react-router-dom"
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
   return (
     <div >
       <Routes>
-        <Route path="/" element={<RoomCard/>}/>
+        <Route path="/" element={<RoomList rooms={rooms}/>}/>
 
 
       </Routes>
