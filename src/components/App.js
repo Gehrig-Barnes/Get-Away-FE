@@ -1,6 +1,8 @@
-import React, {useState, useEffect} from "react"
-import RoomList from "./RoomList"
-import {Route, Routes} from "react-router-dom"
+import React, {useState, useEffect} from "react";
+import RoomList from "./RoomList";
+import {Route, Routes} from "react-router-dom";
+import Navigation from './Navigation';
+import "../App.css";
 
 function App() {
   const [rooms, setRooms] = useState([])
@@ -15,7 +17,10 @@ function App() {
   console.log(rooms)
 
   return (
-    <div >
+    <div>
+      <header>
+        <Navigation />
+      </header>
       <Routes>
         <Route path="/" element={<RoomList rooms={rooms}/>}/>
 
