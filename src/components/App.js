@@ -45,7 +45,7 @@ console.log(rooms);
       <Routes>
       <Route exact path='/rooms/:id' element={<RoomDetails/>}/>
       <Route exact path="/rooms" element={<RoomList rooms={rooms}/>}/>
-      <Route exact path='/login' element={<Login setEmail={setEmail}/>}/>
+      <Route exact path='/login' element={<Login />}/>
       <Route exact path='/host'/>
       
 
