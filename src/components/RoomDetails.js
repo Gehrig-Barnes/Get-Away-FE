@@ -1,8 +1,15 @@
 import React from 'react'
 
 function RoomDetails () {
+    
+
+    
+      
+
     return (
-        <h1>room details</h1>
+        <div>
+            <h2>hello</h2>
+        </div>
     )
 }
 

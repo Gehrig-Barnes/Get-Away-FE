@@ -14,6 +14,8 @@ function RoomList ({rooms}){
                         title={room.title}
                         price={room.price}
                         rating={room.rating}
+                        id={room.id}
+                        
                     />
                 )
             })}
