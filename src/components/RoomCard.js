@@ -1,4 +1,5 @@
 import React from "react"
+
 function RoomCard({address, living_type, image, title, price, rating}){
     return (
         <div>

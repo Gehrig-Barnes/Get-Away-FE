@@ -4,10 +4,11 @@ import { Navbar, Nav } from 'react-bootstrap';
 function Navigation() {
     return(
 <>
-    <Navbar className="nav-bar" style={{ minWidth: 700 }}>
+    <Navbar bg="light" variant="light" className="nav-bar" style={{ minWidth: 700 }}>
+        
         <Navbar.Brand href="/">GetAway</Navbar.Brand>
         <Nav
-            className="mr-auto"
+            className="me-auto"
             style={{ marginLeft: "auto", paddingRight: 40 }}
             >
             <Nav.Link href="/">Home</Nav.Link>
