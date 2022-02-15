@@ -14,3 +14,9 @@ img {
     border-radius: 10%;
     width: 25%;
 }
+
+/* room details page */
+
+.rightcolumn {
+    background-color: rgb(73, 133, 161);
+}
