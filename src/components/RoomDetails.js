@@ -44,12 +44,12 @@ function RoomDetails () {
     return (
       <Container>
         <Row>
-          <Col>
+          <Col className="leftcolumn">
             <h2>{room.title}</h2>
             <img src={room.image} />
-            <h2>{room.description}</h2>
-            <h2>Rating: {room.rating}/10</h2>
-            <h2>Comment: {room.comment}</h2>
+            <h3>{room.description}</h3>
+            <h3>Rating: {room.rating}/10</h3>
+            <h3>Reviews: {room.comment}</h3>
           </Col>
           <Col className="rightcolumn">
             <h2>${room.price}/night</h2>

@@ -1,22 +1,39 @@
 /* nav bar */
+#umbrella {
+    width: 4%;
+    margin-right: 10px;
+}
+
 .nav-bar {
     background-color: rgb(115, 160, 197);
-    font-size: 30px;
+    font-size: 15pt;
+    padding-left: 60px;
 }
+
+.brand {}
+
 
 /* text style */
 body {
-    font-size: 20px;
-
+    font-size: 15pt;
+    font-family: 'Montserrat', sans-serif;
 }
 
 img {
     border-radius: 10%;
-    width: 25%;
+    width: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 /* room details page */
 
+.leftcolumn {
+    padding: 50px;
+}
+
 .rightcolumn {
-    background-color: rgb(73, 133, 161);
+    background-color: rgb(139, 200, 228);
+    text-align: center;
+    padding: 50px;
 }
