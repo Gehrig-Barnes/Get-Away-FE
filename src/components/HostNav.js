@@ -14,7 +14,8 @@ function HostNav() {
                         style={{ marginLeft: "auto", paddingRight: 10 }}
                         >
                         
-                        <Nav.Link href="login">Log Out</Nav.Link>
+                        
+                        <Nav.Link onClick={() => localStorage.clear()} href="login">Log Out</Nav.Link>
                     </Nav>
         </Navbar>
     </>

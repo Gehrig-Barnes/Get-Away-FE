@@ -3,21 +3,30 @@ import { useNavigate, Link } from 'react-router-dom';
 import { Card, Button } from 'react-bootstrap';
 import umbrella from '../umbrella.png';
 
-function Login ({handleEmail, handlePassword, hostData, email}) {
-    
-    
+function Login ({handlePassword, handleLogin}) {
+    const [email, setEmail] = useState('')
 
     let navigate = useNavigate();
 
     function manageLogin(e){
         e.preventDefault();
-        hostData.map((host) => {
-            if(host.email === email)
-                navigate('/host')
+        fetch('http://localhost:9292/login', {
+            method: "POST",
+            body: JSON.stringify({
+                email,
+            }),
+            headers: {
+                "Content-type": "application/json",
+            }
+
         })
-    }
-       
+        .then((r) => r.json())
+        .then((data) => {
+            handleLogin(data)
+            navigate('/host')
+        })
     
+    }
 
     return (
         <div>
@@ -35,7 +44,7 @@ function Login ({handleEmail, handlePassword, hostData, email}) {
                     <input
                         type="text"
                         name="login"
-                        onChange={handleEmail}
+                        onChange={(e) => setEmail(e.target.value)}
                         placeholder="Email"  /><br></br>
                     <input
                         type="password"

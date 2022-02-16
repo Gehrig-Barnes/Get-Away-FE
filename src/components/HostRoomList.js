@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 import HostRoomCard from './HostRoomCard'
+import HostRoomForm from './HostRoomForm'
 
-function HostRoomList ({host}) {
+function HostRoomList ({host, handleRemoveRoom, handleAddRoom}) {
     const [rooms, setRooms] = useState(host.rooms)
     console.log(rooms)
     return (
@@ -18,10 +19,11 @@ function HostRoomList ({host}) {
                         price={room.price}
                         rating={room.rating}
                         id={room.id}
-                        
+                        handleRemoveRoom={handleRemoveRoom}
                     />
                 )
             })}
+            <HostRoomForm host={host} handleAddRoom={handleAddRoom}/>
         </div>
     )
 }
