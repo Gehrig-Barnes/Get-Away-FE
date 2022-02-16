@@ -4,6 +4,7 @@ import {Route, Routes} from "react-router-dom";
 import Navigation from './Navigation';
 import RoomDetails from './RoomDetails'
 import Login from './Login'
+import HostRoomList from './HostRoomList'
 import "../App.css";
 
 //create a route for each home. 
@@ -13,17 +14,34 @@ function App() {
   const [rooms, setRooms] = useState([])
   const [host, setHost] = useState([])
   const [email, setEmail] = useState([])
+  const [hostData, setHostData] = useState([])
+
+  useEffect(() => {
+    fetch("http://localhost:9292/hosts")
+      .then((r) => r.json())
+      .then((data) => setHostData(data));
+
+  }, []);
+
+  
 
   useEffect(() => {
     fetch(`http://localhost:9292/host/${email}`)
       .then((r) => r.json())
       .then((data) => setHost(data));
 
-  }, []);
+  }, [email]);
 
+  
+  
   console.log(host)
 
-  console.log(email)
+  
+
+  function handleEmail(e){
+    const value = e.target.value
+    setEmail(value)
+  }
 
 
   useEffect(() => {
@@ -34,7 +52,8 @@ function App() {
   }, []);
 
   
-console.log(rooms);
+
+
   
 
   return (
@@ -45,8 +64,8 @@ console.log(rooms);
       <Routes>
       <Route exact path='/rooms/:id' element={<RoomDetails/>}/>
       <Route exact path="/rooms" element={<RoomList rooms={rooms}/>}/>
-      <Route exact path='/login' element={<Login />}/>
-      <Route exact path='/host'/>
+      <Route exact path='/login' element={<Login handleEmail={handleEmail} hostData={hostData} email={email}/>}/>
+      <Route exact path='/host' element={<HostRoomList host={host}/>}/>
       
 
         
