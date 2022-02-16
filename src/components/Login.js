@@ -1,14 +1,12 @@
 import React, {useState, useEffect} from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { Card, Button } from 'react-bootstrap';
 import umbrella from '../umbrella.png';
 
 function Login ({handleEmail, handlePassword, hostData, email}) {
     
+    
 
-    console.log(hostData)
-
-    console.log(email)
     let navigate = useNavigate();
 
     function manageLogin(e){
@@ -46,6 +44,9 @@ function Login ({handleEmail, handlePassword, hostData, email}) {
                         placeholder="Password"  /><br></br>
                     <input type="submit" value="Login" className="loginbutton"/>
                 </form>
+                <p>
+                    <Link to='/create'>Create Account</Link>
+                </p>
 
             </Card.Body>
             </Card>
