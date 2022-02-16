@@ -7,6 +7,8 @@ import Login from './Login'
 import HostRoomList from './HostRoomList'
 import Footer from './Footer';
 import "../App.css";
+import HostNav from './HostNav'
+import CreateHost from './CreateHost'
 
 //create a route for each home. 
 //when we click on a home, it should bring us to a page where we see detail and we can checkout(reserve room)
@@ -14,8 +16,11 @@ import "../App.css";
 function App() {
   const [rooms, setRooms] = useState([])
   const [host, setHost] = useState([])
-  const [email, setEmail] = useState([])
+  const [email, setEmail] = useState(localStorage.getItem("email"));
   const [hostData, setHostData] = useState([])
+  
+
+  
 
   useEffect(() => {
     fetch("http://localhost:9292/hosts")
@@ -54,19 +59,47 @@ function App() {
 
   
 
-
+  function handleAddHost(newHost) {
+    const newHostArray = [newHost, ...hostData];
+    setHostData(newHostArray)
+  }
   
 
   return (
     <div>
-      <header>
-        <Navigation />
-      </header>
+      
       <Routes>
-      <Route exact path='/rooms/:id' element={<RoomDetails/>}/>
-      <Route exact path="/rooms" element={<RoomList rooms={rooms}/>}/>
-      <Route exact path='/login' element={<Login handleEmail={handleEmail} hostData={hostData} email={email}/>}/>
-      <Route exact path='/host' element={<HostRoomList host={host}/>}/>
+      <Route exact path='/rooms/:id' element={
+      <div>
+        <Navigation/>
+        <RoomDetails/>
+      </div>
+    }/>
+      <Route exact path="/rooms" element={
+        <div>
+          <Navigation/>
+          <RoomList rooms={rooms}/>
+        </div>
+      
+      }/>
+      <Route exact path='/login' element={
+        <div>
+          <Navigation/>
+          <Login handleEmail={handleEmail} hostData={hostData} email={email}/>
+        </div>
+      }/>
+      <Route exact path='/host' element={
+      <div>
+        <HostNav/>
+        <HostRoomList host={host}/>
+      </div>
+      }/>
+      <Route path="/create" element={
+      <div>
+        <Navigation/>
+        <CreateHost handleAddHost={handleAddHost}/>
+      </div>
+      }/>
       
 
 
