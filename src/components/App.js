@@ -5,6 +5,7 @@ import Navigation from './Navigation';
 import RoomDetails from './RoomDetails'
 import Login from './Login'
 import HostRoomList from './HostRoomList'
+import Footer from './Footer';
 import "../App.css";
 
 //create a route for each home. 
@@ -68,10 +69,9 @@ function App() {
       <Route exact path='/host' element={<HostRoomList host={host}/>}/>
       
 
-        
-
 
       </Routes>
+      <Footer className="footer" />
     </div>
   );
 }

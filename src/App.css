@@ -6,24 +6,57 @@
 
 .nav-bar {
     background-color: rgb(115, 160, 197);
-    font-size: 15pt;
+    font-size: 20px;
     padding-left: 60px;
+    margin-bottom: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 8px;
 }
 
-.brand {}
+.nav-link hover {
+    color: red;
+}
 
 
 /* text style */
 body {
-    font-size: 15pt;
+    font-size: 15px;
     font-family: 'Montserrat', sans-serif;
 }
 
 img {
-    border-radius: 10%;
-    width: 50%;
+    border-radius: 5%;
+    width: 75%;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+/* room card page */
+
+.room_img {
+    width: 50%;
+}
+
+.roomleftcolumn {
+    padding-top: 10px;
+}
+
+.roomrightcolumn {
+    padding-top: 70px;
+}
+
+.seemorebutton {
+    background-color: rgb(115, 160, 197);
+    color: white;
+    text-decoration: none;
+    margin-top: 30px;
+    padding: 5px;
+}
+
+.seemorebutton:hover {
+    background-color: white;
+    text-decoration: none;
+    margin-top: 30px;
+    transition-duration: 0.7s;
 }
 
 /* room details page */
@@ -33,7 +66,67 @@ img {
 }
 
 .rightcolumn {
-    background-color: rgb(139, 200, 228);
+    background-color: rgb(177, 214, 231);
     text-align: center;
-    padding: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 5%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+.checkin {
+    padding-top: 20px;
+}
+
+.calendar {
+    border-radius: 5%;
+    margin-bottom: 20px;
+}
+
+.horizontalrule {
+    color: darkgrey;
+}
+
+/* login page */
+.login_card {
+    text-align: center;
+    margin-left: 35%;
+    margin-top: 10%;
+    border-radius: 10%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.loginbutton {
+    margin: 20px;
+    background-color: white;
+}
+
+img.card-img-top {
+    width: 15%;
+    margin-top: 10%;
+    margin-left: 43%;
+}
+
+input {
+    padding: 8px;
+}
+
+/* footer */
+.footer {
+    margin-top: 150px;
+    width: 100%;
+    bottom: 0;
+    color: black;
+  }
+.footer:before,
+.footer:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+.footer {
+    float: left;
+    text-align: center;
+    width: 100%;
+    padding: 1.25em;
+  }
