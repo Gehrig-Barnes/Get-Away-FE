@@ -1,9 +1,10 @@
 import React, {useEffect, useState} from 'react'
 import {useParams} from 'react-router-dom';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, DropdownButton, Dropdown } from 'react-bootstrap';
 import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 import { DateRange } from 'react-date-range';
+import RoomRating from './RoomRating'
 
 
 function RoomDetails () {
@@ -17,11 +18,24 @@ function RoomDetails () {
         key: 'selection'
       }
     ]);
+    
+    
+
+    const roomRating = (room.rating)
+    const totalRating = (room.total_rating)
+    const roomId = (room.id)
+
+    
+
+    
+
     const date1 = state[0].startDate
     const date2 = state[0].endDate
     const timeDif = date2.getTime() - date1.getTime()
     const dayDif = timeDif / (1000 * 3600 * 24) + 1;
-    console.log(dayDif)
+    
+    
+    
 
 
     useEffect(() => {
@@ -46,7 +60,11 @@ function RoomDetails () {
             <hr className="horizontalrule" />
             <h4>{room.description}</h4>
             <hr className="horizontalrule" />
-            <h4>⭑ Rating: {room.rating}/10</h4>
+            <h4>⭑ Rating: {((room.rating / room.total_rating) * 10).toFixed(1)}/10</h4>
+            <Col>
+              <RoomRating roomId={roomId} roomRating={roomRating} totalRating={totalRating} roomId={roomId}/>
+            </Col>
+            
             <h4>Reviews: {room.comment}</h4>
           </Col>
 

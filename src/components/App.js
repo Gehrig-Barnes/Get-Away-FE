@@ -10,6 +10,8 @@ import "../App.css";
 import HostNav from './HostNav'
 import CreateHost from './CreateHost'
 
+//get the ratings to work. 
+//get comments to work. 
 
 function App() {
   const [rooms, setRooms] = useState([])

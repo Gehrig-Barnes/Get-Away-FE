@@ -22,6 +22,7 @@ function RoomList ({rooms}){
                         price={room.price}
                         rating={room.rating}
                         id={room.id}
+                        total_rating={room.total_rating}
                     />
                 )
             })}
