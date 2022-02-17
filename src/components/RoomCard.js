@@ -14,9 +14,10 @@ function RoomCard({address, living_type, image, title, price, rating, id}){
                         
                     </Col>
                     <Col className="roomrightcolumn" sm={7}>
-                        <h4>Living Type: {living_type}</h4>
+                        <h4>{living_type}</h4>
                             <h4>{address}</h4>
-                            <h5>Rating: {rating} / 10</h5>
+                            <hr className="horizontalrule2" />
+                            <h5>⭑ Rating: {rating} / 10</h5>
                             <h5>${price} / night</h5>
                             <p>
                             <button className="seemorebutton">

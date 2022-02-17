@@ -53,9 +53,8 @@ function Login ({handlePassword, handleLogin}) {
                         placeholder="Password"  /><br></br>
                     <input type="submit" value="Login" className="loginbutton"/>
                 </form>
-                <p>
+                <p className="newhere">New Here?</p>
                     <Link to='/create' className="createaccount">Create Account</Link>
-                </p>
 
             </Card.Body>
             </Card>

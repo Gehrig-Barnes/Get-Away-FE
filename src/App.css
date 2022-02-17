@@ -57,6 +57,7 @@ img {
 
 .room_img {
     width: 75%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .roomleftcolumn {
@@ -65,6 +66,11 @@ img {
 
 .roomrightcolumn {
     padding-top: 70px;
+}
+
+.horizontalrule2 {
+    width: 25%;
+    color: darkgrey;
 }
 
 .seemorebutton {
@@ -94,14 +100,14 @@ img {
     background-color: rgb(67, 68, 68);
     color: white;
     text-align: center;
-    padding-top: 30px;
+    padding-top: 70px;
     padding-bottom: 30px;
     border-radius: 5%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .checkin {
-    padding-top: 20px;
+    padding-top: 50px;
 }
 
 .calendar {
@@ -113,18 +119,32 @@ img {
     color: darkgrey;
 }
 
+.roomdetailsimage {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
 /* login page */
 .login_card {
     text-align: center;
     margin-left: 35%;
     margin-top: 10%;
+    padding-bottom: 30px;
     border-radius: 10%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .loginbutton {
     margin: 20px;
+    background-color: rgb(55, 185, 194);
+    color: white;
+    border: none;
+    border-radius: 10%;
+}
+
+.loginbutton:hover {
+    margin: 20px;
     background-color: white;
+    color: rgb(55, 185, 194);
 }
 
 .createaccount {
@@ -145,6 +165,10 @@ img.card-img-top {
 
 input {
     padding: 8px;
+}
+
+.newhere {
+    padding-top: 20px;
 }
 
 /* host room card */

@@ -3,7 +3,6 @@ import {useParams} from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
-
 import { DateRange } from 'react-date-range';
 
 
@@ -41,18 +40,19 @@ function RoomDetails () {
         <Row>
           <Col className="leftcolumn">
             <h2>{room.title}</h2>
-            <img src={room.image} />
+            <img src={room.image} alt="roomdetailsimage" className="roomdetailsimage"/>
             <h4>{room.living_type}</h4>
-            <h4>{room.address}</h4> 
+            <h4>{room.address}</h4>
+            <hr className="horizontalrule" />
             <h4>{room.description}</h4>
             <hr className="horizontalrule" />
-            <h4>Rating: {room.rating}/10</h4>
+            <h4>⭑ Rating: {room.rating}/10</h4>
             <h4>Reviews: {room.comment}</h4>
           </Col>
+
           <Col className="rightcolumn">
-            <h2>Reserve for</h2>
+            <h2>Reserve this {room.living_type} for</h2>
             <h3><strong>${room.price}</strong> / night</h3>
-            <h3>⭑ {room.rating} / 10</h3>
             <h6 className="checkin">Check-in&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Checkout</h6>
             <DateRange
              editableDateInputs={true}
@@ -63,7 +63,9 @@ function RoomDetails () {
               className="calendar"
             />
             <h4>Total cost: ${room.price * dayDif}</h4>
-            <h4>Nights: {dayDif}</h4> 
+            <h4>Nights: {dayDif}</h4>
+            <button className="seemorebutton">Reserve
+            </button>
           </Col>
         </Row>
       </Container>
