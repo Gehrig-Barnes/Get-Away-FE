@@ -1,27 +1,26 @@
 import React, { useState, useEffect } from "react";
 import { Nav, NavDropdown } from 'react-bootstrap';
 
-function Filter({ filterBy, onChangeFilter }) {
+function Filter({handleLivingType}) {
     
 
-    function handleFilterChange(e) {
-            onChangeFilter(e.target.value);
-    }
+    
 
     return (
 
         // might need onSelect
         <Nav>
-        <NavDropdown title="Price" id="nav-dropdown">
+        <NavDropdown title="Price" id="nav-dropdown" >
           <NavDropdown.Item eventKey="1">$100 or less</NavDropdown.Item>
           <NavDropdown.Item eventKey="2">$101 to 200</NavDropdown.Item>
           <NavDropdown.Item eventKey="3">$201 or more</NavDropdown.Item>
         </NavDropdown>
 
-        <NavDropdown title="Living Type" id="nav-dropdown" onChange={handleFilterChange} value={filterBy}>
-          <NavDropdown.Item eventKey="a" id="apt-only">Apartment</NavDropdown.Item>
-          <NavDropdown.Item eventKey="b">Condo</NavDropdown.Item>
-          <NavDropdown.Item eventKey="c">House</NavDropdown.Item>
+        <NavDropdown onSelect={handleLivingType} title="Living Type" id="nav-dropdown" >
+        <NavDropdown.Item eventKey="All">All</NavDropdown.Item>
+          <NavDropdown.Item eventKey="Apartment">Apartment</NavDropdown.Item>
+          <NavDropdown.Item eventKey="Condo">Condo</NavDropdown.Item>
+          <NavDropdown.Item eventKey="House">House</NavDropdown.Item>
         </NavDropdown>
 
         <NavDropdown title="Rating" id="nav-dropdown">

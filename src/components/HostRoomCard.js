@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col, Card, Container } from 'react-bootstrap';
 
-function HostRoomCard ({address, living_type, image, title, price, rating, id, handleRemoveRoom}) {
+function HostRoomCard ({address, living_type, image, title, price, rating, id, handleRemoveRoom, totalRate}) {
     return (
         <div className="hostroomcard">
         
@@ -15,7 +15,7 @@ function HostRoomCard ({address, living_type, image, title, price, rating, id, h
             <Col className="roomrightcolumn" sm={7}>
             <h4>{living_type}</h4>
             <h4>{address}</h4>
-            <h5>Rating: {rating} / 10</h5>
+            <h5>Rating: {((rating / totalRate) * 10).toFixed(1) } / 10</h5>
             <h5>${price} / night</h5>
             <button
                 id="removeButton"
