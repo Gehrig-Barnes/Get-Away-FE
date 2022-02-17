@@ -1,7 +1,14 @@
-import React from "react"
-import RoomCard from "./RoomCard"
+import React, { useEffect, useState } from "react";
+import RoomCard from "./RoomCard";
+import Filter from './Filter';
 
 function RoomList ({rooms}){
+    const [filterBy, setFilterBy] = useState("Living Type")
+
+    const filteredRooms = rooms.filter(
+        (room) => room.living_type === filterBy
+    );
+
     return (
         <>
         <div className='banner'>
@@ -11,6 +18,10 @@ function RoomList ({rooms}){
                 </div>
                 </div>
         <div>
+            <Filter 
+                filterBy={filterBy}
+                onChangeFilter={setFilterBy}
+            />
             {rooms.map((room) => {
                 return (   
                     <RoomCard 
