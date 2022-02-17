@@ -20,6 +20,7 @@ function HostRoomList ({host, handleRemoveRoom, handleAddRoom}) {
                         price={room.price}
                         rating={room.rating}
                         id={room.id}
+                        totalRate={room.total_rating}
                         handleRemoveRoom={handleRemoveRoom}
 
                     />

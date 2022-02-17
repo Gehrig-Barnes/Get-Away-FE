@@ -3,11 +3,26 @@ import RoomCard from "./RoomCard";
 import Filter from './Filter';
 
 function RoomList ({rooms}){
-    const [filterBy, setFilterBy] = useState("Living Type")
+    const [livingType, setLivingType] = useState("All")
 
-    const filteredRooms = rooms.filter(
-        (room) => room.living_type === filterBy
-    );
+    function handleLivingType (e){
+        setLivingType(e)
+    } 
+
+    console.log(livingType)
+
+    function filterLiving(){
+        if(livingType === "All"){
+            return rooms
+        }
+        else {
+            const filterType = rooms.filter((room) => {
+                return room.living_type === livingType
+            })
+            return filterType
+        }
+
+    }
 
     return (
         <>
@@ -19,10 +34,9 @@ function RoomList ({rooms}){
                 </div>
         <div>
             <Filter 
-                filterBy={filterBy}
-                onChangeFilter={setFilterBy}
+                handleLivingType={handleLivingType}
             />
-            {rooms.map((room) => {
+            {filterLiving().map((room) => {
                 return (   
                     <RoomCard 
                         key={room.id}
