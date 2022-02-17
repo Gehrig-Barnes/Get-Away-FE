@@ -2,7 +2,7 @@ import React from "react"
 import {Link} from 'react-router-dom'
 import { Container, Col, Row } from 'react-bootstrap';
 
-function RoomCard({address, living_type, image, title, price, rating, id}){
+function RoomCard({address, living_type, image, title, price, rating, id, total_rating}){
     return (
         <>
         <div>
@@ -17,7 +17,7 @@ function RoomCard({address, living_type, image, title, price, rating, id}){
                         <h4>{living_type}</h4>
                             <h4>{address}</h4>
                             <hr className="horizontalrule2" />
-                            <h5>⭑ Rating: {rating} / 10</h5>
+                            <h5>⭑ Rating: {((rating / total_rating) * 10).toFixed(1) } </h5>
                             <h5>${price} / night</h5>
                             <p>
                             <button className="seemorebutton">
