@@ -61,8 +61,6 @@ function App() {
     setHostData(newHostArray)
   }
 
-  
-
   function handleAddRoom(newRoom) {
     const newRoomArray = [newRoom, ...rooms];
     setRooms(newRoomArray)

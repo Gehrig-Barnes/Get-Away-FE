@@ -7,14 +7,15 @@
 .nav-bar {
     background-color: rgb(115, 160, 197);
     font-size: 20px;
-    padding-left: 60px;
-    margin-bottom: 50px;
+    padding-left: 5%;
+    margin-bottom: 2%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 8px;
 }
 
-.nav-link hover {
-    color: red;
+.navlinks {
+    margin-left: 60%;
 }
+
 
 
 /* text style */
@@ -30,10 +31,32 @@ img {
     margin-bottom: 20px;
 }
 
+/* room list page - MAIN PAGE */
+
+.banner {
+    background: url("https://www.boutique-homes.com/storage/images/vacation-rentals/europe/greece/akri-villa/villa_for_rent_in_greece_002-1.jpg?s=f");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    position: relative;
+    margin-bottom: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.banner_info {
+    background-color: rgb(67, 68, 68);
+    color: white;
+    padding-top: 25vh;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    width: 450px;
+}
+
 /* room card page */
 
 .room_img {
-    width: 50%;
+    width: 75%;
 }
 
 .roomleftcolumn {
@@ -45,18 +68,20 @@ img {
 }
 
 .seemorebutton {
-    background-color: rgb(115, 160, 197);
+    background-color: rgb(55, 185, 194);
     color: white;
     text-decoration: none;
     margin-top: 30px;
     padding: 5px;
+    border: none;
+    border-radius: 10%;
 }
 
 .seemorebutton:hover {
     background-color: white;
     text-decoration: none;
     margin-top: 30px;
-    transition-duration: 0.7s;
+    color: rgb(55, 185, 194)
 }
 
 /* room details page */
@@ -66,7 +91,8 @@ img {
 }
 
 .rightcolumn {
-    background-color: rgb(177, 214, 231);
+    background-color: rgb(67, 68, 68);
+    color: white;
     text-align: center;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -101,6 +127,16 @@ img {
     background-color: white;
 }
 
+.createaccount {
+    color: black;
+    text-decoration: none;
+}
+
+.createaccount:hover {
+    color: black;
+    text-decoration: underline;
+}
+
 img.card-img-top {
     width: 15%;
     margin-top: 10%;
@@ -109,6 +145,32 @@ img.card-img-top {
 
 input {
     padding: 8px;
+}
+
+/* host room card */
+
+.hostroomcard {
+    padding-left: 40px;
+}
+
+.hostcard {
+    text-align: center;
+}
+
+.welcometitle {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.newroomform {
+    text-align: left;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+label {
+    margin-left: 20px;
 }
 
 /* footer */

@@ -10,12 +10,12 @@ function HostNav() {
                 <Navbar.Brand href="/rooms" className="brand">GetAway</Navbar.Brand>
                     
                     <Nav
-                        className="me-auto"
-                        style={{ marginLeft: "auto", paddingRight: 10 }}
+                        className="navlinks"
+                        style={{ paddingRight: 10 }}
                         >
                         
                         
-                        <Nav.Link onClick={() => localStorage.clear()} href="login">Log Out</Nav.Link>
+                        <Nav.Link onClick={() => localStorage.clear()} href="login">Logout</Nav.Link>
                     </Nav>
         </Navbar>
     </>

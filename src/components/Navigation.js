@@ -10,8 +10,8 @@ function Navigation() {
                 <Navbar.Brand href="/rooms" className="brand">GetAway</Navbar.Brand>
                     
                     <Nav
-                        className="me-auto"
-                        style={{ marginLeft: "auto", paddingRight: 10 }}
+                        className="navlinks"
+                        style={{ paddingRight: 10 }}
                         >
                         <Nav.Link href="/rooms">Home</Nav.Link>
                         <Nav.Link href="/rooms">Account</Nav.Link>

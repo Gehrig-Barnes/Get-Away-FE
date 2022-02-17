@@ -3,9 +3,16 @@ import RoomCard from "./RoomCard"
 
 function RoomList ({rooms}){
     return (
+        <>
+        <div className='banner'>
+            <div className='banner_info'>
+                <h1>Get there fast and then take it slow</h1>
+                <h6>Find your next dream GetAway today</h6>
+                </div>
+                </div>
         <div>
             {rooms.map((room) => {
-                return (
+                return (   
                     <RoomCard 
                         key={room.id}
                         address={room.address}
@@ -15,11 +22,12 @@ function RoomList ({rooms}){
                         price={room.price}
                         rating={room.rating}
                         id={room.id}
-                        
                     />
                 )
             })}
-        </div>
+            </div>
+        
+        </>
     )
 }
 

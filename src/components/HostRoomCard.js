@@ -1,20 +1,35 @@
-import React from 'react'
+import React from 'react';
+import { Row, Col, Card, Container } from 'react-bootstrap';
 
 function HostRoomCard ({address, living_type, image, title, price, rating, id, handleRemoveRoom}) {
     return (
-        <div>
-            <h2>{title}</h2>
-            <img src={image} alt=''/>
-            <h2>Living Type: {living_type}</h2>
-            <h3>{address}</h3>
-            <h3>Rating: {rating}/10</h3>
-            <h3>${price}/night</h3>
+        <div className="hostroomcard">
+        
+        <Container>
+        <Row>
+            <Col className="roomleftcolumn" sm={5}>
+                <h2>{title}</h2>
+                <img src={image} alt='room_image' className="room_img"/>
+                
+            </Col>
+            <Col className="roomrightcolumn" sm={7}>
+            <h4>Living Type: {living_type}</h4>
+            <h4>{address}</h4>
+            <h5>Rating: {rating} / 10</h5>
+            <h5>${price} / night</h5>
             <button
                 id="removeButton"
-                onClick={() => handleRemoveRoom(id)}>remove
+                onClick={() => handleRemoveRoom(id)}
+                className="seemorebutton"
+                >Remove
             </button>
-            
-        </div>
+                </Col>
+        </Row>
+        <hr className="horizontalrule"></hr>
+    </Container>
+</div>
+
+
     )
 }
 

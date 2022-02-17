@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { Card } from 'react-bootstrap';
 
 function HostRoomForm ({host, handleAddRoom}) {
     const [title, setTitle] = useState('')
@@ -35,59 +36,71 @@ function HostRoomForm ({host, handleAddRoom}) {
 
     return (
         <div>
-            <h1>Host a Room!</h1>
-            <form onSubmit={handleSubmit}>
+        <Card style={{ width: '30rem' }} className="login_card">
+        <Card.Body>
+            <Card.Title><h2>Host A New Room</h2></Card.Title>
+            <Card.Text>
+            
+            </Card.Text>
+
+            <form onSubmit={handleSubmit} className="newroomform">
                 <label>Title: </label>
                 <input
                         type="text"
                         name="title"
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
-                    />
+                    /><br></br>
                 <label>Description: </label>
                 <input
                         type="text"
                         name="description"
                         value={description}
                         onChange={(e) => setDescription(e.target.value)}
-                    />
+                    /><br></br>
                 <label>Address: </label>
                 <input
                         type="text"
                         name="address"
                         value={address}
                         onChange={(e) => setAddress(e.target.value)}
-                    />
+                    /><br></br>
                 <label>Living Type: </label>
                 <input
                         type="text"
                         name="type"
                         value={livingType}
                         onChange={(e) => setLivingType(e.target.value)}
-                    />
+                    /><br></br>
                 <label>Image: </label>
                 <input
                         type="text"
                         name="image"
                         value={image}
                         onChange={(e) => setImage(e.target.value)}
-                    />
+                    /><br></br>
                 <label>Price: </label>
                 <input
                         type="integer"
                         name="price"
                         value={price}
                         onChange={(e) => setPrice(e.target.value)}
-                    />
+                    /><br></br>
                 <div>
                     <input
                         class="submit"
                         type='submit'
-                        name='submit'>
+                        name='submit'
+                        className="seemorebutton">
                     </input>
                 </div>
                 
             </form>
+
+        </Card.Body>
+        </Card>
+            
+            
         </div>
     )
 }

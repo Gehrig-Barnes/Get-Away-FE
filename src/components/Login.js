@@ -54,7 +54,7 @@ function Login ({handlePassword, handleLogin}) {
                     <input type="submit" value="Login" className="loginbutton"/>
                 </form>
                 <p>
-                    <Link to='/create'>Create Account</Link>
+                    <Link to='/create' className="createaccount">Create Account</Link>
                 </p>
 
             </Card.Body>

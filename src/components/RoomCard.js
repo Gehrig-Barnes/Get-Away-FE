@@ -4,6 +4,7 @@ import { Container, Col, Row } from 'react-bootstrap';
 
 function RoomCard({address, living_type, image, title, price, rating, id}){
     return (
+        <>
         <div>
             <Container>
                 <Row>
@@ -28,6 +29,7 @@ function RoomCard({address, living_type, image, title, price, rating, id}){
             </Container>
             
         </div>
+        </>
     )
 }
 
