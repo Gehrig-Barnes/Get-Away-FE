@@ -5,7 +5,7 @@ import umbrella from '../umbrella.png';
 function Navigation() {
     return(
     <>
-        <Navbar bg="light" variant="light" className="nav-bar" style={{ minWidth: 700 }}>
+        <Navbar fixed="top" bg="light" variant="light" className="nav-bar" style={{ minWidth: 700 }}>
             <img id="umbrella" src={umbrella} alt="umbrella"/>
                 <Navbar.Brand href="/rooms" className="brand">GetAway</Navbar.Brand>
                     
