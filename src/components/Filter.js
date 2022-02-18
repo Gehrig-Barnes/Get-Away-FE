@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Nav, NavDropdown } from 'react-bootstrap';
 
-function Filter({handleLivingType}) {
+function Filter({handleLivingType, handlePrice}) {
     
 
     
@@ -10,14 +10,15 @@ function Filter({handleLivingType}) {
 
         // might need onSelect
         <Nav>
-        <NavDropdown title="Price" id="nav-dropdown" >
-          <NavDropdown.Item eventKey="1">$100 or less</NavDropdown.Item>
-          <NavDropdown.Item eventKey="2">$101 to 200</NavDropdown.Item>
-          <NavDropdown.Item eventKey="3">$201 or more</NavDropdown.Item>
+        <NavDropdown onSelect={handlePrice} title="Price" id="nav-dropdown" >
+          <NavDropdown.Item eventKey="0">All</NavDropdown.Item>
+          <NavDropdown.Item eventKey="100">$100 or less</NavDropdown.Item>
+          <NavDropdown.Item eventKey="101">$101 to 200</NavDropdown.Item>
+          <NavDropdown.Item eventKey="201">$201 or more</NavDropdown.Item>
         </NavDropdown>
 
         <NavDropdown onSelect={handleLivingType} title="Living Type" id="nav-dropdown" >
-        <NavDropdown.Item eventKey="All">All</NavDropdown.Item>
+          <NavDropdown.Item eventKey="All">All</NavDropdown.Item>
           <NavDropdown.Item eventKey="Apartment">Apartment</NavDropdown.Item>
           <NavDropdown.Item eventKey="Condo">Condo</NavDropdown.Item>
           <NavDropdown.Item eventKey="House">House</NavDropdown.Item>

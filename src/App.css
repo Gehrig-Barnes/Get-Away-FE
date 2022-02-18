@@ -218,3 +218,14 @@ label {
     width: 100%;
     padding: 1.25em;
   }
+
+  .create_login {
+      text-align: center;
+      margin-left: 38%;
+      margin-top: 5%;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 8px;
+  }
+
+  .host {
+      text-align: center;
+  }
