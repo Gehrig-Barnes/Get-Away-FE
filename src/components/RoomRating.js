@@ -22,34 +22,34 @@ function RoomRating ({ roomRating, totalRating, roomId}){
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit}>
             <label htmlFor="rate">Rate This Room:</label>
-              <select
-                class="rating"
-                name="rate"
-                id="rates"
-                value={rating}
-                onChange={(e) => setRating(e.target.value)}
-              >
-                <option>select:</option>
-                <option type="integer">10</option>
-                <option type="integer">9</option>
-                <option type="integer">8</option>
-                <option type="integer">7</option>
-                <option type="integer">6</option>
-                <option type="integer">5</option>
-                <option type="integer">4</option>
-                <option type="integer">3</option>
-                <option type="integer">2</option>
-                <option type="integer">1</option>
-              </select>
+            <select
+              class="rating"
+              name="rate"
+              id="rates"
+              value={rating}
+              onChange={(e) => setRating(e.target.value)}
+            >
+              <option>select:</option>
+              <option type="integer">10</option>
+              <option type="integer">9</option>
+              <option type="integer">8</option>
+              <option type="integer">7</option>
+              <option type="integer">6</option>
+              <option type="integer">5</option>
+              <option type="integer">4</option>
+              <option type="integer">3</option>
+              <option type="integer">2</option>
+              <option type="integer">1</option>
+            </select>
               <br></br>
-              <button
-                className="ratebutton"
-                type='submit'
-                name='submit'>Rate
-              </button>
-              </form>
+            <button
+              className="ratebutton"
+              type='submit'
+              name='submit'>Rate
+            </button>
+          </form>
 
         </div>
     )

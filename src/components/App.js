@@ -11,16 +11,12 @@ import HostNav from './HostNav'
 import CreateHost from './CreateHost'
 import umbrella from '../umbrella.png';
 
-//get the ratings to work. 
-//get comments to work. 
-
 function App() {
   const [rooms, setRooms] = useState([])
   const [email, setEmail] = useState(localStorage.getItem("email"));
   const [hostData, setHostData] = useState([])
   const [removeRequest, setRemoveRequest] = useState(false);
   const [currentUser, setCurrentUser] = useState({})
-
   let navigate = useNavigate();
 
   useEffect(() => {
