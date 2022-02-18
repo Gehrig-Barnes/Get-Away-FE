@@ -1,16 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Nav, NavDropdown } from 'react-bootstrap';
 
-function Filter({handleLivingType, handlePrice}) {
+function Filter({handleLivingType}) {
     
-
-    
-
     return (
 
-        // might need onSelect
-        <Nav>
-        <NavDropdown onSelect={handlePrice} title="Price" id="nav-dropdown" >
+      <Nav>
+        <NavDropdown title="Price" id="nav-dropdown" >
           <NavDropdown.Item eventKey="0">All</NavDropdown.Item>
           <NavDropdown.Item eventKey="100">$100 or less</NavDropdown.Item>
           <NavDropdown.Item eventKey="101">$101 to 200</NavDropdown.Item>

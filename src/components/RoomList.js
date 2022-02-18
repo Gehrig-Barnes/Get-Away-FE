@@ -1,18 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import RoomCard from "./RoomCard";
 import Filter from './Filter';
 
 function RoomList ({rooms}){
     const [livingType, setLivingType] = useState("All")
-    const [price, setPrice] = useState(0)
 
     function handleLivingType (e){
         setLivingType(e)
     } 
-
-    function handlePrice(e){
-        setPrice()
-    }
 
     console.log(livingType)
 
@@ -26,8 +21,6 @@ function RoomList ({rooms}){
             })
             return filterType
         }
-        
-
     }
 
     return (
