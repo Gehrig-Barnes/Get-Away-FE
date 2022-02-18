@@ -18,6 +18,7 @@ function Filter({handleLivingType}) {
           <NavDropdown.Item eventKey="Apartment">Apartment</NavDropdown.Item>
           <NavDropdown.Item eventKey="Condo">Condo</NavDropdown.Item>
           <NavDropdown.Item eventKey="House">House</NavDropdown.Item>
+          <NavDropdown.Item eventKey="Igloo">Igloo</NavDropdown.Item>
         </NavDropdown>
 
         <NavDropdown title="Rating" id="nav-dropdown">

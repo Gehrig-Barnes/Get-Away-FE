@@ -184,7 +184,8 @@ img {
 
 .calendar {
     border-radius: 5%;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 100px;
 }
 
 .horizontalrule {
