@@ -7,7 +7,7 @@ function HostRoomForm ({host, handleAddRoom}) {
     const [address, setAddress] = useState('')
     const [livingType, setLivingType] = useState('')
     const [image, setImage] = useState('')
-    const [price, setPrice] = useState(0)
+    const [price, setPrice] = useState(null)
     const [hostId, setHostId] = useState(host.id)
 
     console.log(hostId)
@@ -35,8 +35,8 @@ function HostRoomForm ({host, handleAddRoom}) {
     }
 
     return (
-        <div>
-        <Card style={{ width: '30rem' }} className="login_card">
+        <div >
+        <Card style={{ width: '30rem' }} className="login_card" >
         <Card.Body>
             <Card.Title><h2>Host A New Room</h2></Card.Title>
             <Card.Text>
@@ -44,43 +44,49 @@ function HostRoomForm ({host, handleAddRoom}) {
             </Card.Text>
 
             <form onSubmit={handleSubmit} className="newroomform">
-                <label>Title: </label>
+                
                 <input
+                        placeholder='Title'
                         type="text"
                         name="title"
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
                     /><br></br>
-                <label>Description: </label>
+                
                 <input
+                        placeholder='Description'
                         type="text"
                         name="description"
                         value={description}
                         onChange={(e) => setDescription(e.target.value)}
                     /><br></br>
-                <label>Address: </label>
+                
                 <input
+                        placeholder='Address'
                         type="text"
                         name="address"
                         value={address}
                         onChange={(e) => setAddress(e.target.value)}
                     /><br></br>
-                <label>Living Type: </label>
+                
                 <input
+                        placeholder='Living Type'
                         type="text"
                         name="type"
                         value={livingType}
                         onChange={(e) => setLivingType(e.target.value)}
                     /><br></br>
-                <label>Image: </label>
+                
                 <input
+                        placeholder='Image'
                         type="text"
                         name="image"
                         value={image}
                         onChange={(e) => setImage(e.target.value)}
                     /><br></br>
-                <label>Price: </label>
+                
                 <input
+                        placeholder='Price'
                         type="integer"
                         name="price"
                         value={price}
@@ -88,10 +94,12 @@ function HostRoomForm ({host, handleAddRoom}) {
                     /><br></br>
                 <div>
                     <input
+                        value="Host a Room"
                         class="submit"
                         type='submit'
                         name='submit'
                         className="seemorebutton">
+                        
                     </input>
                 </div>
                 

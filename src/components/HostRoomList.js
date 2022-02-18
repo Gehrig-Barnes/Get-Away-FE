@@ -7,7 +7,7 @@ function HostRoomList ({host, handleRemoveRoom, handleAddRoom}) {
     console.log(rooms)
     return (
         <div>
-            <h1 className="welcometitle">Welcome {host.first_name}</h1>
+            <h1 className="welcometitle">Welcome, {host.first_name}</h1>
             <h3 className="welcometitle">Currently Hosting</h3>
             {rooms.map((room) => {
                 return (
