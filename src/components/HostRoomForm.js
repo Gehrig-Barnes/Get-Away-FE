@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { Card } from 'react-bootstrap';
+import umbrella from '../umbrella.png';
 
 function HostRoomForm ({host, handleAddRoom}) {
     const [title, setTitle] = useState('')
@@ -38,6 +39,7 @@ function HostRoomForm ({host, handleAddRoom}) {
         <div >
         <Card style={{ width: '30rem' }} className="login_card" >
         <Card.Body>
+            <img src={umbrella} className="umbrella" />
             <Card.Title><h2>Host A New Room</h2></Card.Title>
             <Card.Text>
             

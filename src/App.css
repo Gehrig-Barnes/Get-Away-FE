@@ -4,6 +4,72 @@
     margin-right: 10px;
 }
 
+.umbrella {
+    width: 15%;
+}
+
+/* main page */
+
+.bigumbrella {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    margin-top: 10%;
+}
+
+.maintitle {
+    margin-left: 20%;
+
+    display:inline-block;
+    overflow:hidden;
+    white-space:nowrap;
+  }
+  
+.maintitle:first-of-type {
+    animation: showup 7s infinite;
+  }
+  
+.maintitle:last-of-type {
+    width:0px;
+    animation: reveal 7s infinite;
+  }
+  
+.maintitle2:last-of-type {
+    margin-left:-355px;
+    animation: slidein 7s infinite;
+  }
+
+.maintitle2 {
+    padding-left: 30%;
+    display:inline-block;
+    overflow:hidden;
+    white-space:nowrap;
+}
+  
+  @keyframes showup {
+      0% {opacity:0;}
+      20% {opacity:1;}
+      80% {opacity:1;}
+      100% {opacity:0;}
+  }
+  
+  @keyframes slidein {
+      0% { margin-left:-800px; }
+      20% { margin-left:-800px; }
+      35% { margin-left:0px; }
+      100% { margin-left:0px; }
+  }
+  
+  @keyframes reveal {
+      0% {opacity:0;width:0px;}
+      20% {opacity:1;width:0px;}
+      30% {width:355px;}
+      80% {opacity:1;}
+      100% {opacity:0;width:355px;}
+  }
+
+
 .nav-bar {
     background-color: rgb(115, 160, 197);
     font-size: 20px;
@@ -31,7 +97,7 @@ img {
     margin-bottom: 20px;
 }
 
-/* room list page - MAIN PAGE */
+/* room list page */
 
 .banner {
     background: url("https://www.boutique-homes.com/storage/images/vacation-rentals/europe/greece/akri-villa/villa_for_rent_in_greece_002-1.jpg?s=f");
@@ -189,10 +255,11 @@ input {
 }
 
 .newroomform {
-    text-align: left;
-    padding-left: 30px;
+    text-align: center;
+    padding-top: 20px;
+    /* padding-left: 30px;
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 30px; */
 }
 
 label {
@@ -229,3 +296,20 @@ label {
   .host {
       text-align: center;
   }
+
+  .ratebutton {
+    background-color: rgb(55, 185, 194);
+    color: white;
+    text-decoration: none;
+    margin-top: 30px;
+    padding: 5px;
+    border: none;
+    border-radius: 10%;
+}
+
+.ratebutton:hover {
+    background-color: white;
+    text-decoration: none;
+    margin-top: 30px;
+    color: rgb(55, 185, 194)
+}

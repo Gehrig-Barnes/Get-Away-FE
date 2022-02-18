@@ -65,7 +65,6 @@ function RoomDetails () {
               <RoomRating roomId={roomId} roomRating={roomRating} totalRating={totalRating} roomId={roomId}/>
             </Col>
             
-            <h4>Reviews: {room.comment}</h4>
           </Col>
 
           <Col className="rightcolumn">

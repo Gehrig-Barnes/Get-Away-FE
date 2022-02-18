@@ -9,6 +9,7 @@ import Footer from './Footer';
 import "../App.css";
 import HostNav from './HostNav'
 import CreateHost from './CreateHost'
+import umbrella from '../umbrella.png';
 
 //get the ratings to work. 
 //get comments to work. 
@@ -112,10 +113,21 @@ function App() {
           </div>
         }/>
       
-        <Route path="/create" element={
+        <Route exact path="/create" element={
           <div>
             <Navigation/>
             <CreateHost handleAddHost={handleAddHost}/>
+          </div>
+        }/>
+
+        <Route exact path="/" element={
+          <div>
+            <Navigation />
+            <img src={umbrella} className="bigumbrella"/>
+            <h2 className="maintitle">Are you ready to</h2>
+            <div>
+            <h3 className="maintitle2">...GetAway?</h3>
+            </div>
           </div>
         }/>
       

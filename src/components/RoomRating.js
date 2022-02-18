@@ -43,11 +43,12 @@ function RoomRating ({ roomRating, totalRating, roomId}){
                 <option type="integer">2</option>
                 <option type="integer">1</option>
               </select>
-              <input
-                  class="submit"
-                  type='submit'
-                  name='submit'>
-              </input>
+              <br></br>
+              <button
+                className="ratebutton"
+                type='submit'
+                name='submit'>Rate
+              </button>
               </form>
 
         </div>
