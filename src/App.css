@@ -144,7 +144,7 @@ img {
     color: white;
     text-decoration: none;
     margin-top: 30px;
-    padding: 5px;
+    padding: 10px;
     border: none;
     border-radius: 10%;
 }
@@ -158,10 +158,14 @@ img {
 
 /* room details page */
 
+.faketext {
+    font-size: 200px;
+    color: white;
+}
+
 .leftcolumn {
     padding: 50px;
     margin-right: 40px;
-
 }
 
 .rightcolumn {
@@ -207,6 +211,7 @@ img {
     color: white;
     border: none;
     border-radius: 10%;
+    padding: 10px;
 }
 
 .loginbutton:hover {
@@ -301,8 +306,9 @@ label {
     background-color: rgb(55, 185, 194);
     color: white;
     text-decoration: none;
-    margin-top: 30px;
-    padding: 5px;
+    margin-top: 50px;
+    margin-right: 50px;
+    padding: 10px;
     border: none;
     border-radius: 10%;
 }
@@ -310,6 +316,10 @@ label {
 .ratebutton:hover {
     background-color: white;
     text-decoration: none;
-    margin-top: 30px;
     color: rgb(55, 185, 194)
+}
+
+.selectbutton {
+    padding: 10px;
+    margin-right: 10px;
 }

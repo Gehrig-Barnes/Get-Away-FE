@@ -37,6 +37,7 @@ function RoomDetails () {
 
     return (
       <Container>
+        <h1 className="faketext">GetAway</h1>
         <Row>
           <Col className="leftcolumn">
             <h2>{room.title}</h2>

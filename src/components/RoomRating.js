@@ -23,15 +23,16 @@ function RoomRating ({ roomRating, totalRating, roomId}){
     return (
         <div>
           <form onSubmit={handleSubmit}>
-            <label htmlFor="rate">Rate This Room:</label>
+            <label htmlFor="rate"></label>
             <select
-              class="rating"
+              className="selectbutton"
               name="rate"
               id="rates"
               value={rating}
               onChange={(e) => setRating(e.target.value)}
             >
-              <option>select:</option>
+              
+              <option>Select:</option>
               <option type="integer">10</option>
               <option type="integer">9</option>
               <option type="integer">8</option>
@@ -43,11 +44,11 @@ function RoomRating ({ roomRating, totalRating, roomId}){
               <option type="integer">2</option>
               <option type="integer">1</option>
             </select>
-              <br></br>
-            <button
+
+              <button
               className="ratebutton"
               type='submit'
-              name='submit'>Rate
+              name='submit'>Rate This Room
             </button>
           </form>
 

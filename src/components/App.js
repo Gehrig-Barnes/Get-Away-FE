@@ -119,7 +119,7 @@ function App() {
         <Route exact path="/" element={
           <div>
             <Navigation />
-            <img src={umbrella} className="bigumbrella"/>
+            <a href="/rooms"><img src={umbrella} className="bigumbrella" /></a>
             <h2 className="maintitle">Are you ready to</h2>
             <div>
             <h3 className="maintitle2">...GetAway?</h3>

@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { Card } from 'react-bootstrap';
 import umbrella from '../umbrella.png';
+import { useNavigate } from 'react-router-dom';
 
 function CreateHost ({handleAddHost}) {
     const [firstName, setFirstName] = useState('')
@@ -12,6 +13,7 @@ function CreateHost ({handleAddHost}) {
     const [dob, setDob] = useState('')
     const [gender, setGender] = useState('')
     const [password, setPassword] = useState('')
+    let nav = useNavigate()
     
     function handleSubmit(e){
         e.preventDefault();
@@ -33,7 +35,10 @@ function CreateHost ({handleAddHost}) {
             }),
         })
         .then((r) => r.json())
-        .then((newHost) => handleAddHost(newHost))
+        .then((newHost) => {
+            handleAddHost(newHost)
+            nav('/login')
+        })
     }
 
     return (
@@ -117,9 +122,9 @@ function CreateHost ({handleAddHost}) {
                                     value="Get Away!"
                                     class="submit"
                                     type='submit'
-                                    name='submit'> 
-                                    
+                                    name='submit'>
                                 </input>
+                              
                             </div>
                         </section>
                     </form>
