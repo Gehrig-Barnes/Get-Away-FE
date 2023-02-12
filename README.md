@@ -1,3 +1,23 @@
+# GetAway (Frontend)
+
+GetAway is a vacation homes rental application.
+
+This application was created with HTML, CSS, JavaScript, React.js, React-Bootstrap for the frontend and Ruby and Sinatra for the backend. This README corresponds to the frontend code of the application. For the backend code, please see Get-Away-BE repo.
+
+## Application Features
+
+## Project Requirements
+
+FRONTEND REQs
+1️⃣ Full C.R.U.D. on 1 CENTRAL / MAIN model in app - 3 of 4 CRUD actions need to be working
+2️⃣ External API - Incorporate a 3rd-Party API
+
+BACKEND REQs
+1️⃣ Full C.R.U.D. on 1 CENTRAL / MAIN model in app - 3 of 4 CRUD actions need to be working
+2️⃣ Has_many_through Relationships - Includes 1 has_many_through relationship
+
+## Images and YouTube Demo
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
